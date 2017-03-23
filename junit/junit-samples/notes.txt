@@ -1,0 +1,43 @@
+JUnit5:
+
+JUnit4 issues
+- junit runners are not composable: Parametrized + SpringRunner -> no way 
+- single rule can`t be used for method level and class level callbacks
+  
+
+JUnit 5 (platform + Jupiter + Vintage)
+features:
+- modular
+- extensible
+- modern
+- forward and backward compatibile
+  * junit platform supports junit 3.8, junit 4 and junit 5
+    @RunWith(JUnitPlatform.class) 
+
+- @ExtendWith replaces @RunWith and is composable
+
+
+JUnit Jupiter api
+- Annotations and meta-annotations
+  @Test, @TestFactory for dynamic tests
+  @BeforeAll/@AfterAll
+  @BeforeEach/@AfterEach
+  @DisplayName
+  @Tag
+  @Disabled
+  @Nested
+- Assertions and Assumptions
+  assertEquals()
+  assertThrows()
+  assertTimeout(), assertTimeoutPreemptively()
+  assertAll()
+- custom display names
+- Visibility
+- Tagging
+- Conditional test execution
+- Dependency injecction for constructor and methods
+- Lambda expressions and method references
+- Interface default methods
+- Nested test classes
+- Dynamic tests
+
