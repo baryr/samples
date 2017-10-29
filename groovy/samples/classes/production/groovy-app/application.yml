@@ -1,0 +1,34 @@
+
+# Devtools settings:
+# spring.devtools.livereload.enabled: false  # to not start LiveReload server for browser refreshing ...
+spring.devtools.reload.trigger-file: .reload   # to tell spring to reload only when particular fill will change
+
+# To exclude some autoconfig of boot
+# spring.autoconfigure.exclude
+
+
+# Actuator configuration
+# Override default sensitive settings:
+endpoints:
+  #actuator.sensitive: false   # Requires Spring HATEOAS to be on the classpath
+  auditevents.sensitive: false
+  autoconfig.sensitive: false
+  beans.sensitive: false
+  configprops.sensitive: false
+  dump.sensitive: false
+  env.sensitive: false
+  #flyway.sensitive: false   # Require something ...
+  #health.sensitive: false   # false by default
+  #info.sensitive: false   # false by default
+  loggers.sensitive: false
+  #liquibase.sensitive: false   # Require something ...
+  metrics.sensitive: false
+  mappings.sensitive: false
+  shutdown:
+    enabled:   true
+    sensitive: false
+  trace.sensitive: false
+  #docs.sensitive: false   # false by default  Requires spring-boot-actuator-docs on class path
+  heapdump.sensitive: false
+  #jolokia.sensitive: false  Requires Jolokia on the classpath
+  #logfile.sensitive: false  (if logging.file or logging.path properties have been set)
